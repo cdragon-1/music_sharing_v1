@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Deezer-test</title>
+</head>
+<body>
+<div class="search-container">
+    <form action="" class="search-form">
+        <input type="text" name="keyword">
+        <button type="submit" class="btn">Deezer Search!</button>
+    </form>
+
+    <ul class="music-list">
+        {% for music in musics %}
+        <li class="music-item">
+            <img src="{{ music.url_picture }}" alt="" class="item-picture">
+            <div class="item-content">
+                <div class="vcenter ellipsis">
+                    <a href="" class="item-title">{{ music.title }}</a>
+                    <!--<p class="item-desc"musicideo.description }}</p>-->
+                    <!--<p class="item-date"musicideo.published_date }}</p>-->
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
