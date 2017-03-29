@@ -17,12 +17,12 @@
     <ul class="music-list">
         {% for music in musics %}
         <li class="music-item">
-            <img src="{{ music.url_picture }}" alt="" class="item-picture">
+
             <div class="item-content">
                 <div class="vcenter ellipsis">
-                    <a href="" class="item-title">{{ music.title }}</a>
-                    <!--<p class="item-desc"musicideo.description }}</p>-->
-                    <!--<p class="item-date"musicideo.published_date }}</p>-->
+                    <a href="" class="item-title">Title: {{ music.title }}</a>
+                    <a href="{{ music.preview }}" class="item-preview">Preview: {{ music.preview }}</a>
+                    <img src="{{ music.picture }}" alt="" class=""item-picture>
                 </div>
             </div>
         </li>
